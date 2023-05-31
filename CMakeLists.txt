@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.3.0)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(GEODE_DISABLE_FMT_CONSTEVAL true)
+# set(CMAKE_MAKE_PROGRAM make)
+# set(CMAKE_C_COMPILER clang)
+# set(CMAKE_CXX_COMPILER clang++)
 
 project(LenasModMenu VERSION 1.0.0)
 
@@ -21,7 +23,6 @@ else()
     message(STATUS "Found Geode: $ENV{GEODE_SDK}")
 endif()
 
-set(GEODE_LINK_NIGHTLY ON)
 add_subdirectory($ENV{GEODE_SDK} $ENV{GEODE_SDK}/build)
 
 # Set up dependencies, resources, link Geode
